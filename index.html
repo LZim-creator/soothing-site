@@ -7,15 +7,18 @@
       font-family: Arial;
       text-align: center;
       background: #fff0f5;
-      margin-top: 100px;
+      margin-top: 80px;
     }
+
     .stick {
       font-size: 80px;
     }
+
     button {
       padding: 10px 20px;
       font-size: 16px;
       margin-top: 20px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -36,11 +39,25 @@ function next() {
     <h1>But I actually like you</h1>
     <div class="stick">💗🙂</div>
     <p>I just didn’t show it right sometimes</p>
+
     <p>Press play when you're ready</p>
 
-    <audio controls autoplay>
-      <source src="song.mp3" type="audio/mpeg">
-    </audio>
+    <!-- 🎵 MUSIC STARTS HERE -->
+    <iframe width="0" height="0"
+    src="https://www.youtube.com/embed/tdKmewyZPXE?autoplay=1&loop=1&playlist=tdKmewyZPXE"
+    frameborder="0"
+    allow="autoplay">
+    </iframe>
+
+    <button onclick="final()">Next</button>
+  `;
+}
+
+function final() {
+  document.body.innerHTML = `
+    <h1>That’s it…</h1>
+    <div class="stick">🥺</div>
+    <p>I just wanted you to hear it the right way</p>
   `;
 }
 </script>
