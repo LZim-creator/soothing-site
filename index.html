@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #fff0f5;
+      margin-top: 100px;
+    }
+    .stick {
+      font-size: 80px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>I made you something</h1>
+
+<div class="stick">🙂</div>
+
+<p>I know I don’t always say things the right way…</p>
+
+<button onclick="next()">Next</button>
+
+<script>
+function next() {
+  document.body.innerHTML = `
+    <h1>But I actually like you</h1>
+    <div class="stick">💗🙂</div>
+    <p>I just didn’t show it right sometimes</p>
+    <p>Press play when you're ready</p>
+
+    <audio controls autoplay>
+      <source src="song.mp3" type="audio/mpeg">
+    </audio>
+  `;
+}
+</script>
+
+</body>
+</html>
