@@ -4,60 +4,77 @@
   <title>For You</title>
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       text-align: center;
       background: #fff0f5;
-      margin-top: 80px;
+      margin-top: 70px;
     }
 
     .stick {
       font-size: 80px;
+      margin: 20px 0;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 22px;
       font-size: 16px;
       margin-top: 20px;
       cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: #ffb6c1;
+    }
+
+    .box {
+      max-width: 500px;
+      margin: auto;
     }
   </style>
 </head>
 
 <body>
 
-<h1>I made you something</h1>
+<div class="box" id="content">
 
-<div class="stick">🙂</div>
+  <h1>I made you something</h1>
+  <div class="stick">🙂</div>
 
-<p>I know I don’t always say things the right way…</p>
+  <p>I know I don’t always say things the right way…</p>
 
-<button onclick="next()">Next</button>
+  <button onclick="next()">Next</button>
+
+</div>
 
 <script>
 function next() {
-  document.body.innerHTML = `
+  document.getElementById("content").innerHTML = `
     <h1>But I actually like you</h1>
     <div class="stick">💗🙂</div>
+
     <p>I just didn’t show it right sometimes</p>
+    <p>This song explains it better than I can</p>
 
-    <p>Press play when you're ready</p>
-
-    <!-- 🎵 MUSIC STARTS HERE -->
-    <iframe width="0" height="0"
-    src="https://www.youtube.com/embed/tdKmewyZPXE?autoplay=1&loop=1&playlist=tdKmewyZPXE"
+    <!-- 🎵 MUSIC PLAYER (VISIBLE + WORKS) -->
+    <iframe width="320" height="180"
+    src="https://www.youtube.com/embed/tdKmewyZPXE"
     frameborder="0"
-    allow="autoplay">
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
     </iframe>
+
+    <br>
 
     <button onclick="final()">Next</button>
   `;
 }
 
 function final() {
-  document.body.innerHTML = `
+  document.getElementById("content").innerHTML = `
     <h1>That’s it…</h1>
     <div class="stick">🥺</div>
+
     <p>I just wanted you to hear it the right way</p>
+    <p>No pressure… I just meant it</p>
   `;
 }
 </script>
